@@ -26,7 +26,9 @@ namespace NumberGuesser
             Console.WriteLine("Hello, {0}. Lets play a game.", inputName);
 
             // Init correct number
-            int correctNumber = 7;
+            Random random = new Random();
+            int correctNumber = random.Next(1, 11);
+            Console.WriteLine(correctNumber);
 
             // Init guess var
             int guess = 0;
@@ -49,9 +51,9 @@ namespace NumberGuesser
                         Console.ResetColor();
 
                     } else {
-
+                        Console.ForegroundColor = ConsoleColor.Cyan;
                         Console.WriteLine("Great job, you guessed it!");
-
+                        Console.ResetColor();
                     }
                     } else {
 
